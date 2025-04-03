@@ -1,0 +1,102 @@
+Node install
+Vs code
+create folder(BATCH 6) and open vs code 
+create sub folder (demo)
+open terminal and select folder path
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------==============================================================================================
+Install React Environment
+ 
+Step-> 1 npm create vite@latest (Enter the Terminal)
+Project name: first (just example) (Enter the Terminal)
+Select a framework: 
+react
+Select a variant
+javascript     (Enter the Terminal)
+Done. Now run:
+
+  cd first (Enter the Terminal)
+  npm install  (Enter the Terminal)
+  npm run dev  (Enter the Terminal)
+PS C:\Users\Suresh\Documents\REACT_BATCH_5\demo> cd first (enter)
+PS C:\Users\Suresh\Documents\REACT_BATCH_5\demo\first> npm install (enter)
+PS C:\Users\Suresh\Documents\REACT_BATCH_5\demo\first> npm run dev (enter)
+http://localhost:5173/  (go to google and past this link)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------==============================================================================================
+install Bootstrap in React
+https://react-bootstrap.github.io/  (first visited this website)
+
+second step -> 
+npm install react-bootstrap bootstrap (Enter the Terminal)
+ 
+third step->
+paste the link index file
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+  crossorigin="anonymous"
+/>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+==============================================================================================
+ import { BrowserRouter as Router , Routes , Route , Link} from " react-router-dom "; 
+install React Router Dom
+step-> 1 npm install react-router-dom (Enter the Terminal)
+
+step 2 structure or syntax how to implied
+           function Navbar()
+		{
+		return(
+			<>
+			<Router>   // ( <Link to="/"className="text-blue-500">Home</Link>) [important line ]
+				 <Nav className="me-auto">
+            <Nav.Link href="#home"><Link to="/"className="text-blue-500">Home</Link></Nav.Link>
+            <Nav.Link href="#pricing"><Link to="/About"className="text-blue-500">About</Link></Nav.Link>
+            <Nav.Link href="#Contact"><Link to="/Contact"className="text-blue-500">Contact</Link></Nav.Link>
+          
+          </Nav>
+
+
+	 <Routes>
+		<Route path="/" element={<Home/>}/>
+		<Route path="/About" element={<About/>}/>
+		<Route path="/contact" element={<Contact/>}/>
+	</Routes>
+       </Router>
+      </>
+   );
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+==============================================================================================
+Enter the Value in React 
+Step 1 
+   	const [nm , SetNm]=useState(" ")
+	const handleNameChange=(e) =>{
+		SetNm(e. target. Value);
+		console.log(nm)
+		};
+             [ Other Method]
+	function handleNameChange(e){
+            SetNm(e. target. Value);
+   };
+
+        [ Other Method]
+	function getNm(e){
+           console.log(nm)
+            alert(nm)
+   };
+Step 2 
+          import { useState} from "react"
+		export default function Name()
+	{
+		return(
+                   <>
+                             <center>
+ 			<h1> React Event and UseState</h1>
+                            Name <input type="text" onChange={handleNameChange}></input><br></br>
+  				<input type ="button" onClick={getNm} value{"GetVal"}></input>
+			<h1>{nm}</h1>
+				</Center>
+			</>
+        )
+};
+
